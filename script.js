@@ -58,6 +58,8 @@ function renderQuestions() {
       // Restore previous selection from sessionStorage
       if (progress[i] === choice) {
         choiceElement.checked = true;
+        // Add attribute so Cypress can detect it
+        choiceElement.setAttribute("checked", "true");
       }
 
       // Save selection to sessionStorage
